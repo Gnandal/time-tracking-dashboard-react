@@ -18,7 +18,7 @@ export function App() {
   return (
     <div className='flex gap-8'>
       <div className='w-1/4 max-w-sm  bg-dark-blue rounded-lg shadow'>
-        <UserCard />
+        <UserCard/>
         <div className="flex flex-col gap-5 p-6 text-left">
           <Filter />
         </div>

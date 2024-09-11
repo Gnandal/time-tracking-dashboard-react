@@ -3,6 +3,14 @@ const colors = require('tailwindcss/colors');
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    'bg-work',
+    'bg-play',
+    'bg-study',
+    'bg-exercise',
+    'bg-self-care',
+    'bg-social',
+  ],
   theme: {
     extend: {
       colors: {
@@ -17,7 +25,7 @@ export default {
         study: 'hsl(348, 100%, 68%)',
         exercise: 'hsl(145, 58%, 55%)',
         social: 'hsl(264, 64%, 52%)',
-        sefCare: 'hsl(43, 84%, 65%)',   
+        'self-care': 'hsl(43, 84%, 65%)',   
       }
     },
   },
