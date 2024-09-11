@@ -1,7 +1,11 @@
+import { getActiveFilterName } from "../store/filter-store";
 import { TaskByTimeFrame } from "../types";
 
+
 export const TaskCard = ({title, current, previous}: TaskByTimeFrame) => {
-    return (
+  const filterFirstLetter = getActiveFilterName()?.charAt(0);
+  
+  return (
         <div className={`w-full overflow-hidden flex-1 flex flex-col bg-${title.toLocaleLowerCase().replace(' ', '-')} rounded-lg shadow`}>
           <img className='flex-1 self-end -my-3 me-4' src={`/assets/images/icon-${title.toLocaleLowerCase().replace(' ', '-')}.svg`} alt="icon-work" />
           <div className='flex flex-col gap-6 text-start bg-dark-blue p-8 rounded-lg'>
@@ -13,7 +17,7 @@ export const TaskCard = ({title, current, previous}: TaskByTimeFrame) => {
             <div className="text-6xl">
               {current}hrs
             </div>
-            <span className="text-pale-blue">Previous - {previous}hrs</span>
+            <span className="text-pale-blue">{filterFirstLetter == 'd' ? 'Yesterday' : (filterFirstLetter == 'w' ? 'Last Week' : 'Last Month')} - {previous}hrs</span>
             </div>
           </div>
         </div>

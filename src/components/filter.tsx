@@ -1,20 +1,8 @@
-import { useState } from "preact/hooks"
+import { useFilterStore } from "../store/filter-store";
 
 export const Filter = () => {
-    const [options, setOptions] = useState([
-        { name: "Daily", checked: true },
-        { name: "Weekly", checked: false },
-        { name: "Monthly", checked: false }
-    ]);
-
-    const onChange = (selectedIndex: Number) => {
-        var updatedOptions = options.slice().map((option, index) => {
-            option.checked = index === selectedIndex ? true : false;
-            return option;
-        });
-
-        setOptions([...updatedOptions]);
-    };
+    const options = useFilterStore((state) => state.filterState);
+    const onChange = useFilterStore((state) => state.filterUpdate);
 
     return <div class="flex lg:flex-col flex-row justify-between w-full gap-5 p-8 text-left">{
         options.map((option, index) => {
