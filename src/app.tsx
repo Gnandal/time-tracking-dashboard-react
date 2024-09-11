@@ -16,15 +16,13 @@ export function App() {
   }, [])
 
   return (
-    <div className='flex gap-8'>
-      <div className='w-1/4 max-w-sm  bg-dark-blue rounded-lg shadow'>
+    <div className='flex flex-col lg:flex-row gap-8'>
+      <div className='lg:w-1/4 w-full  bg-dark-blue rounded-lg shadow'>
         <UserCard/>
-        <div className="flex flex-col gap-5 p-6 text-left">
-          <Filter />
-        </div>
+        <Filter />
       </div>
 
-      <div className='w-3/4 grid grid-cols-3 grid-rows-2 gap-6'>
+      <div className='lg:w-3/4 w-full flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 gap-6'>
         {
           tasks.map((task: Task) => {
             return <TaskCard title={task.title} current={task.timeframes.daily.current} previous={task.timeframes.daily.previous} />

@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Gnandal/time-tracking-dashboard-react)
-- Live Site URL: [Demo](https://gnandal.github.io/time-tracking-dashboard-react)
+- Live Site URL: [Demo](https://time-tracking-dashboard-react-bay.vercel.app/)
 
 ## My process
 
