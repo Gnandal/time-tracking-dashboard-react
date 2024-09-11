@@ -9,7 +9,7 @@ export function App() {
   const [tasks, setTasks] = useState([] as Task[]);
 
   useEffect(() => {
-    fetch('/src/assets/data.json')
+    fetch('/assets/data.json')
       .then((response) => {
        response.json().then(setTasks)
       });
