@@ -16,7 +16,7 @@ export const Filter = () => {
         setOptions([...updatedOptions]);
     };
 
-    return <div class="flex lg:flex-col flex-row justify-between w-full gap-5 p-6 text-left">{
+    return <div class="flex lg:flex-col flex-row justify-between w-full gap-5 p-8 text-left">{
         options.map((option, index) => {
             return (
                 <div>
