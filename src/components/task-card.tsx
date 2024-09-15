@@ -8,7 +8,7 @@ export const TaskCard = ({title, current, previous}: TaskByTimeFrame) => {
   return (
         <div className={`w-full overflow-hidden flex-1 flex flex-col bg-${title.toLocaleLowerCase().replace(' ', '-')} rounded-lg shadow`}>
           <img className='flex-1 self-end -my-3 me-4' src={`/assets/images/icon-${title.toLocaleLowerCase().replace(' ', '-')}.svg`} alt="icon-work" />
-          <div className='flex flex-col gap-6 text-start bg-dark-blue sm:p-8 p-4 rounded-lg'>
+          <div className='flex flex-col gap-6 text-start bg-dark-blue sm:p-8 p-4 rounded-lg hover:bg-desaturated-blue'>
             <div className='w-full flex justify-between align-middle font-semibold'>
               <h2>{title}</h2>
               <div>. . .</div>
