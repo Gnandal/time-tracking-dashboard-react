@@ -8,7 +8,7 @@ export const UserCard = () => {
             <img class="w-16 h-16 mb-3 rounded-full border-white border-2 shadow-lg" src={imageJeremy} alt="Jeremy image" />
             <div class='text-left'>
               <span class="text-sm text-pale-blue">Report for</span>
-              <h5 class="mb-1 lg:text-5xl text-4xl font-medium text-gray-900 dark:text-white">Jeremy Robson</h5>
+              <h5 class="mb-1 lg:text-5xl text-4xl font-medium text-white">Jeremy Robson</h5>
             </div>
           </div>
         </div>
